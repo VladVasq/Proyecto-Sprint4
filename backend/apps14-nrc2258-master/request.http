@@ -1,0 +1,80 @@
+###
+
+POST http://localhost:9000/api/users HTTP/1.1
+Content-Type: application/json
+
+{
+"name":"Eduardo",
+"usuario":"EduPl123",
+"password":"EPR.12346",
+"email":"Eduardo19@hotmail.com"
+}
+
+###
+POST http://localhost:9000/login HTTP/1.1
+
+{
+"usuario":"EduPal123",
+"password":"EPR.123456"
+}
+
+###
+POST http://localhost:9000/api/orders
+Content-Type: application/json
+
+{
+    "id_user":"6388020102bc74ff1375c635",
+    "date":"2022-12-04",
+    "hours":"7:10 pm", 
+    "largo": 20,
+    "Ancho":20,
+    "Alto": 20,
+    "peso": 200,
+    "Delicado":"No",
+    "DirRecogida":"Cl 29 No 37 23",
+    "CiudadRecogida":"Soledad/Atlantico",
+    "usuarioEnviado":"Marlon Belandia",
+    "DocRem":"22378963",
+    "DirEnvio":"Cl pedro heredia No 20 23",
+    "CiudadEnvio":"Cartagena/Bolivar",
+    "Estado":"Guardado"
+  
+    }
+
+###
+
+GET http://localhost:9000/api/orders
+Content-Type: application/json
+###
+
+GET  http://localhost:9000/api/users 
+Content-Type: application/json
+
+###
+
+GET http://localhost:9000/api/orders/638fb030b6e77cf20cff2ce5
+
+
+###
+###
+PUT  http://localhost:9000/api/orders/638fb030b6e77cf20cff2ce5
+Content-Type: application/json
+
+{
+    "id_user":"638baa17e5b5c701398dd49",
+    "date":"2022-12-04",
+    "hours":"7:10 pm", 
+    "largo": 40,
+    "Ancho":40,
+    "Alto": 40,
+    "peso": 400,
+    "Delicado":"Si",
+    "DirRecogida":"Cl 29 No 37 23",
+    "CiudadRecogida":"Soledad/Atlantico",
+    "usuarioEnviado":"Giovanni Belandia",
+    "DocRem":"20000000",
+    "DirEnvio":"Cl pedro heredia No 20 23",
+    "CiudadEnvio":"Cartagena/Bolivar",
+    "Estado":"Guardado"
+  
+    }
